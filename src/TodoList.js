@@ -6,7 +6,7 @@ function TodoList() {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/todos");
+      const res = await axios.get("https://ormtodo.onrender.com/api/todos");
       console.log(res.data.data);
       setTodos(res.data.data);
     } catch (err) {
@@ -21,7 +21,7 @@ function TodoList() {
 
   const handleToggle = async (id, isCompleted) => {
     try {
-      await axios.put(`http://localhost:3000/api/todos/${id}`, {
+      await axios.put(`https://ormtodo.onrender.com/api/todos/${id}`, {
         isCompleted: !isCompleted,
       });
       fetchTodos();
@@ -32,7 +32,7 @@ function TodoList() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/api/todos/${id}`);
+      await axios.delete(`https://ormtodo.onrender.com/api/todos/${id}`);
       fetchTodos();
     } catch (err) {
       console.error(err);

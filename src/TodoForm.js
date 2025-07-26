@@ -17,7 +17,7 @@ function TodoForm(){
         }
 
         try{
-            await axios.post("http://localhost:3000/api/todos",{
+            await axios.post("https://ormtodo.onrender.com/api/todos",{
                 task,
                 date,
 
